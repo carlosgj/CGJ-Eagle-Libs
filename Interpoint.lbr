@@ -99,6 +99,8 @@
 <wire x1="-17.78" y1="-12.7" x2="-17.78" y2="10.16" width="0.254" layer="94"/>
 <pin name="TRI" x="-22.86" y="-2.54" length="middle"/>
 <pin name="INH1" x="-22.86" y="-5.08" length="middle"/>
+<text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
+<text x="7.62" y="-15.24" size="1.27" layer="94">&gt;PN</text>
 </symbol>
 <symbol name="MFL-D">
 <pin name="IN" x="-22.86" y="7.62" length="middle"/>
@@ -116,37 +118,13 @@
 <wire x1="-17.78" y1="-12.7" x2="-17.78" y2="10.16" width="0.254" layer="94"/>
 <pin name="TRI" x="-22.86" y="-2.54" length="middle"/>
 <pin name="INH1" x="-22.86" y="-5.08" length="middle"/>
+<text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
+<text x="7.62" y="-15.24" size="1.27" layer="94">&gt;PN</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MFL2805S">
-<description>Isolated DC-DC Converter (5V)</description>
-<gates>
-<gate name="G$1" symbol="MFL-S" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MFL">
-<connects>
-<connect gate="G$1" pin="IN" pad="P$1"/>
-<connect gate="G$1" pin="INH1" pad="P$4"/>
-<connect gate="G$1" pin="IN_RTN" pad="P$2"/>
-<connect gate="G$1" pin="MSTR/INH2" pad="P$12"/>
-<connect gate="G$1" pin="OUT" pad="P$7"/>
-<connect gate="G$1" pin="OUT_RTN" pad="P$8"/>
-<connect gate="G$1" pin="OUT_RTN_SENSE" pad="P$9"/>
-<connect gate="G$1" pin="OUT_SENSE" pad="P$10"/>
-<connect gate="G$1" pin="SLAVE" pad="P$11"/>
-<connect gate="G$1" pin="SYNC_IN" pad="P$6"/>
-<connect gate="G$1" pin="SYNC_OUT" pad="P$5"/>
-<connect gate="G$1" pin="TRI" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MFL2815D">
+<deviceset name="MFLD" uservalue="yes">
+<description>Isolated DC-DC converter (dual output)</description>
 <gates>
 <gate name="G$1" symbol="MFL-D" x="0" y="0"/>
 </gates>
@@ -166,13 +144,21 @@
 <connect gate="G$1" pin="TRI" pad="P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="-2805">
+<attribute name="PN" value="MFL2805D" constant="no"/>
+</technology>
+<technology name="-2812">
+<attribute name="PN" value="MFL2812D" constant="no"/>
+</technology>
+<technology name="-2815">
+<attribute name="PN" value="MFL2815D" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MFL283R3S">
-<description>Isolated DC-DC Converter (5V)</description>
+<deviceset name="MFLS">
+<description>Isolated DC-DC converter (single output)</description>
 <gates>
 <gate name="G$1" symbol="MFL-S" x="0" y="0"/>
 </gates>
@@ -193,111 +179,18 @@
 <connect gate="G$1" pin="TRI" pad="P$3"/>
 </connects>
 <technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MFL2812S">
-<description>Isolated DC-DC Converter (5V)</description>
-<gates>
-<gate name="G$1" symbol="MFL-S" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MFL">
-<connects>
-<connect gate="G$1" pin="IN" pad="P$1"/>
-<connect gate="G$1" pin="INH1" pad="P$4"/>
-<connect gate="G$1" pin="IN_RTN" pad="P$2"/>
-<connect gate="G$1" pin="MSTR/INH2" pad="P$12"/>
-<connect gate="G$1" pin="OUT" pad="P$7"/>
-<connect gate="G$1" pin="OUT_RTN" pad="P$8"/>
-<connect gate="G$1" pin="OUT_RTN_SENSE" pad="P$9"/>
-<connect gate="G$1" pin="OUT_SENSE" pad="P$10"/>
-<connect gate="G$1" pin="SLAVE" pad="P$11"/>
-<connect gate="G$1" pin="SYNC_IN" pad="P$6"/>
-<connect gate="G$1" pin="SYNC_OUT" pad="P$5"/>
-<connect gate="G$1" pin="TRI" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MFL2815S">
-<description>Isolated DC-DC Converter (5V)</description>
-<gates>
-<gate name="G$1" symbol="MFL-S" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MFL">
-<connects>
-<connect gate="G$1" pin="IN" pad="P$1"/>
-<connect gate="G$1" pin="INH1" pad="P$4"/>
-<connect gate="G$1" pin="IN_RTN" pad="P$2"/>
-<connect gate="G$1" pin="MSTR/INH2" pad="P$12"/>
-<connect gate="G$1" pin="OUT" pad="P$7"/>
-<connect gate="G$1" pin="OUT_RTN" pad="P$8"/>
-<connect gate="G$1" pin="OUT_RTN_SENSE" pad="P$9"/>
-<connect gate="G$1" pin="OUT_SENSE" pad="P$10"/>
-<connect gate="G$1" pin="SLAVE" pad="P$11"/>
-<connect gate="G$1" pin="SYNC_IN" pad="P$6"/>
-<connect gate="G$1" pin="SYNC_OUT" pad="P$5"/>
-<connect gate="G$1" pin="TRI" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MFL2805D">
-<gates>
-<gate name="G$1" symbol="MFL-D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MFL">
-<connects>
-<connect gate="G$1" pin="IN" pad="P$1"/>
-<connect gate="G$1" pin="INH1" pad="P$4"/>
-<connect gate="G$1" pin="IN_RTN" pad="P$2"/>
-<connect gate="G$1" pin="MSTR/INH2" pad="P$12"/>
-<connect gate="G$1" pin="OUT_NEG" pad="P$9"/>
-<connect gate="G$1" pin="OUT_POS" pad="P$7"/>
-<connect gate="G$1" pin="OUT_RTN" pad="P$8"/>
-<connect gate="G$1" pin="SLAVE" pad="P$11"/>
-<connect gate="G$1" pin="SYNC_IN" pad="P$6"/>
-<connect gate="G$1" pin="SYNC_OUT" pad="P$5"/>
-<connect gate="G$1" pin="TRI" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MFL2812D">
-<gates>
-<gate name="G$1" symbol="MFL-D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MFL">
-<connects>
-<connect gate="G$1" pin="IN" pad="P$1"/>
-<connect gate="G$1" pin="INH1" pad="P$4"/>
-<connect gate="G$1" pin="IN_RTN" pad="P$2"/>
-<connect gate="G$1" pin="MSTR/INH2" pad="P$12"/>
-<connect gate="G$1" pin="OUT_NEG" pad="P$9"/>
-<connect gate="G$1" pin="OUT_POS" pad="P$7"/>
-<connect gate="G$1" pin="OUT_RTN" pad="P$8"/>
-<connect gate="G$1" pin="SLAVE" pad="P$11"/>
-<connect gate="G$1" pin="SYNC_IN" pad="P$6"/>
-<connect gate="G$1" pin="SYNC_OUT" pad="P$5"/>
-<connect gate="G$1" pin="TRI" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
+<technology name="-2805">
+<attribute name="PN" value="MFL2805S" constant="no"/>
+</technology>
+<technology name="-2812">
+<attribute name="PN" value="MFL2812S" constant="no"/>
+</technology>
+<technology name="-2815">
+<attribute name="PN" value="MFL2815S" constant="no"/>
+</technology>
+<technology name="-283R3">
+<attribute name="PN" value="MFL283R3S" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
