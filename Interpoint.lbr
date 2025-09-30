@@ -80,6 +80,26 @@
 <hole x="35.052" y="-16.002" drill="3.2"/>
 <hole x="35.052" y="16.002" drill="3.2"/>
 </package>
+<package name="SMTRF">
+<pad name="P$1" x="20.32" y="10.16" drill="1.2" shape="square"/>
+<pad name="P$2" x="10.16" y="10.16" drill="1.2"/>
+<pad name="P$3" x="0" y="10.16" drill="1.2"/>
+<pad name="P$4" x="-10.16" y="10.16" drill="1.2"/>
+<pad name="P$5" x="-20.32" y="10.16" drill="1.2"/>
+<pad name="P$6" x="-20.32" y="-10.16" drill="1.2"/>
+<pad name="P$7" x="-10.16" y="-10.16" drill="1.2"/>
+<pad name="P$8" x="0" y="-10.16" drill="1.2"/>
+<pad name="P$9" x="10.16" y="-10.16" drill="1.2"/>
+<pad name="P$10" x="20.32" y="-10.16" drill="1.2"/>
+<hole x="-32.385" y="0" drill="4.1148"/>
+<hole x="32.385" y="0" drill="4.1148"/>
+<wire x1="-26.543" y1="14.1732" x2="26.543" y2="14.1732" width="0.127" layer="21"/>
+<wire x1="26.543" y1="14.1732" x2="37.084" y2="0" width="0.127" layer="21"/>
+<wire x1="37.084" y1="0" x2="26.543" y2="-14.1732" width="0.127" layer="21"/>
+<wire x1="26.543" y1="-14.1732" x2="-26.543" y2="-14.1732" width="0.127" layer="21"/>
+<wire x1="-26.543" y1="-14.1732" x2="-37.084" y2="0" width="0.127" layer="21"/>
+<wire x1="-37.084" y1="0" x2="-26.543" y2="14.1732" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MFL-S">
@@ -120,6 +140,42 @@
 <pin name="INH1" x="-22.86" y="-5.08" length="middle"/>
 <text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
 <text x="7.62" y="-15.24" size="1.27" layer="94">&gt;PN</text>
+</symbol>
+<symbol name="SMTR-D">
+<pin name="IN" x="-22.86" y="10.16" length="middle"/>
+<pin name="IN_RTN" x="-22.86" y="-12.7" length="middle"/>
+<pin name="OUT_POS" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="OUT_COMMON" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="OUT_NEG" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="CASE1" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="CASE2" x="-2.54" y="-20.32" length="middle" rot="R90"/>
+<pin name="INHIBIT" x="0" y="20.32" length="middle" rot="R270"/>
+<pin name="SYNC" x="-5.08" y="20.32" length="middle" rot="R270"/>
+<wire x1="-17.78" y1="15.24" x2="17.78" y2="15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="15.24" x2="17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="-17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-15.24" x2="-17.78" y2="15.24" width="0.254" layer="94"/>
+<pin name="CASE3" x="0" y="-20.32" length="middle" rot="R90"/>
+<text x="-17.78" y="-17.78" size="1.778" layer="94">&gt;NAME</text>
+<text x="5.08" y="-17.78" size="1.778" layer="94">&gt;PN</text>
+</symbol>
+<symbol name="SMTR-S">
+<pin name="IN" x="-22.86" y="10.16" length="middle"/>
+<pin name="IN_RTN" x="-22.86" y="-12.7" length="middle"/>
+<pin name="OUT" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="OUT_SENSE" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="RTN_SENSE" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="OUT_RTN" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="CASE1" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="CASE2" x="-2.54" y="-20.32" length="middle" rot="R90"/>
+<pin name="INHIBIT" x="0" y="20.32" length="middle" rot="R270"/>
+<pin name="SYNC" x="-5.08" y="20.32" length="middle" rot="R270"/>
+<wire x1="-17.78" y1="15.24" x2="17.78" y2="15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="15.24" x2="17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="-17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-15.24" x2="-17.78" y2="15.24" width="0.254" layer="94"/>
+<text x="-17.78" y="-17.78" size="1.778" layer="94">&gt;NAME</text>
+<text x="2.54" y="-17.78" size="1.778" layer="94">&gt;PN</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -190,6 +246,73 @@
 </technology>
 <technology name="-283R3">
 <attribute name="PN" value="MFL283R3S" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMTRDF">
+<gates>
+<gate name="G$1" symbol="SMTR-D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMTRF">
+<connects>
+<connect gate="G$1" pin="CASE1" pad="P$6"/>
+<connect gate="G$1" pin="CASE2" pad="P$7"/>
+<connect gate="G$1" pin="CASE3" pad="P$8"/>
+<connect gate="G$1" pin="IN" pad="P$1"/>
+<connect gate="G$1" pin="INHIBIT" pad="P$2"/>
+<connect gate="G$1" pin="IN_RTN" pad="P$10"/>
+<connect gate="G$1" pin="OUT_COMMON" pad="P$4"/>
+<connect gate="G$1" pin="OUT_NEG" pad="P$5"/>
+<connect gate="G$1" pin="OUT_POS" pad="P$3"/>
+<connect gate="G$1" pin="SYNC" pad="P$9"/>
+</connects>
+<technologies>
+<technology name="-2805">
+<attribute name="PN" value="SMTR2805D" constant="no"/>
+</technology>
+<technology name="-2812">
+<attribute name="PN" value="SMTR2812D" constant="no"/>
+</technology>
+<technology name="-2815">
+<attribute name="PN" value="SMTR2815D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMTRSF">
+<gates>
+<gate name="G$1" symbol="SMTR-S" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMTRF">
+<connects>
+<connect gate="G$1" pin="CASE1" pad="P$7"/>
+<connect gate="G$1" pin="CASE2" pad="P$8"/>
+<connect gate="G$1" pin="IN" pad="P$1"/>
+<connect gate="G$1" pin="INHIBIT" pad="P$2"/>
+<connect gate="G$1" pin="IN_RTN" pad="P$10"/>
+<connect gate="G$1" pin="OUT" pad="P$5"/>
+<connect gate="G$1" pin="OUT_RTN" pad="P$4"/>
+<connect gate="G$1" pin="OUT_SENSE" pad="P$6"/>
+<connect gate="G$1" pin="RTN_SENSE" pad="P$3"/>
+<connect gate="G$1" pin="SYNC" pad="P$9"/>
+</connects>
+<technologies>
+<technology name="-2805">
+<attribute name="PN" value="SMTR2805SF" constant="no"/>
+</technology>
+<technology name="-2812">
+<attribute name="PN" value="SMTR2812SF" constant="no"/>
+</technology>
+<technology name="-2815">
+<attribute name="PN" value="SMTR2815SF" constant="no"/>
+</technology>
+<technology name="-283R3">
+<attribute name="PN" value="SMTR283R3SF" constant="no"/>
 </technology>
 </technologies>
 </device>
